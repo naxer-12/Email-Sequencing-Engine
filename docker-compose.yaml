@@ -1,0 +1,30 @@
+services:
+  api:
+    build: .
+    command: uvicorn main:app --host 0.0.0.0 --reload --reload-dir /app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+      DATABASE_URL: mysql+pymysql://root:root@mysql:3306/emailengine
+      REDIS_URL: redis://redis:6379
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: emailengine
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+volumes:
+  mysql_data:

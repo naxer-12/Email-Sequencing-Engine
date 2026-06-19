@@ -1,0 +1,39 @@
+# Virtual environment
+venv/
+env/
+bin/
+include/
+lib/
+pyvenv.cfg
+
+# Secrets and environment variables (CRITICAL!)
+.env
+.env.local
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.vscode/
+.idea/
+
+# Test cache and coverage
+.pytest_cache/
+.coverage
+
+# Database files
+*.db
+*.sqlite
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
