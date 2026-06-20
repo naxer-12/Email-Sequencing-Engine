@@ -1,7 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+from config import settings
+
 app = FastAPI(title="Email Engine")
+
+DATABASE_URL = settings.database_url
 
 
 class Sequence(BaseModel):
