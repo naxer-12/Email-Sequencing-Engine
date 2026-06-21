@@ -43,7 +43,7 @@ def run_migrations_offline() -> None:
 def run_migrations_online() -> None:
     configuration = config.get_section(config.config_ini_section)  # ← works now
     configuration["sqlalchemy.url"] = os.getenv(
-        "DATABASE_URL", "mysql+pymysql://root:root@localhost:3306/emailengine"
+        "DATABASE_URL", "mysql+pymysql://root:root@mysql:3306/emailengine"
     )
 
     connectable = engine_from_config(

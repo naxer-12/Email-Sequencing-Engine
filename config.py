@@ -2,14 +2,14 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    db_host: str = "localhost"
+    db_host: str = "mysql"
     db_user: str = "root"
     db_password: str
     db_name: str = "emailengine"
 
-    redis_url: str = "redis://localhost:6379"
+    redis_url: str = "redis://redis:6379"
 
-    kafka_broker: str = "localhost:9092"
+    kafka_broker: str = "kafka:9092"
     gemini_api_key: str
 
     smtp_host: str = "live.smtp.mailtrap.io"

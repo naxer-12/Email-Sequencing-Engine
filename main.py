@@ -2,10 +2,14 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 
 from config import settings
+from routers import users
 
 app = FastAPI(title="Email Engine")
 
 DATABASE_URL = settings.database_url
+
+
+app.include_router(users.router)
 
 
 class Sequence(BaseModel):
