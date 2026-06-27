@@ -1,0 +1,10 @@
+$kind: http-request
+method: PUT
+url: '{{baseUrl}}/users/:user_id'
+order: 4000
+pathVariables:
+  - key: user_id
+    value: '1'
+queryParams:
+  - key: email
+    value: updated@example.com

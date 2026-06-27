@@ -1,0 +1,7 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/t/open/:token'
+order: 1000
+pathVariables:
+  - key: token
+    value: 431ad5d45d6d4335928cba777503a92000102f45dc2a4b3883f83b259f18087a

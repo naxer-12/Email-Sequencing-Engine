@@ -1,0 +1,9 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/t/click'
+order: 2000
+queryParams:
+  - key: token
+    value: 431ad5d45d6d4335928cba777503a92000102f45dc2a4b3883f83b259f18087a
+  - key: url
+    value: 'https://example.com'

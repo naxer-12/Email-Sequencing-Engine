@@ -1,0 +1,9 @@
+$kind: http-request
+method: GET
+url: '{{baseUrl}}/users/'
+order: 2000
+queryParams:
+  - key: skip
+    value: '0'
+  - key: limit
+    value: '10'

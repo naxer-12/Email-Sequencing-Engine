@@ -1,0 +1,10 @@
+$kind: http-request
+method: POST
+url: '{{baseUrl}}/sequences/:sequence_id/enrollments/'
+order: 1000
+pathVariables:
+  - key: sequence_id
+    value: '1'
+queryParams:
+  - key: recipient_id
+    value: '1'
